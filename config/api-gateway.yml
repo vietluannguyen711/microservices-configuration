@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: QUIZ-ITEM-SERVICE
+              uri: lb://quiz-item-service
+              predicates:
+                - Path=/items/**
+
+            - id: QUIZ-CART-SERVICE
+              uri: lb://quiz-cart-service
+              predicates:
+                - Path=/carts/**
+
+            - id: QUIZ-USER-SERVICE
+              uri: lb://quiz-user-service
+              predicates:
+                - Path=/users/**
+
+            - id: QUIZ-AUTH-SERVICE
+              uri: lb://quiz-auth-service
+              predicates:
+                - Path=/auth/**
+
+
+server:
+  port: 8080
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+jwt:
+  secret: adjglasjdglsaglknagsnasngdanghaiuehtaeiuhgfsdkgbkashdgaiulgbaksgdbasgagaebgkabgabdsgkabgdkjabkgbadgkbaskgjabsg
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
