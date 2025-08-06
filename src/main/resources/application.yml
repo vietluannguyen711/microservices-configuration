@@ -10,6 +10,7 @@ spring:
       server:
         git:
           uri: https://github.com/vietluannguyen711/microservices-configuration.git # <-- Thay b?ng URL kho Git c?a b?n
+          search-paths: # Tùy ch?n: Th? m?c con ch?a file config
+            - config
           default-label: main # Tùy ch?n: Nhánh Git m?c ??nh (ví d?: main, master)
           clone-on-start: true
-        bootstrap: true
