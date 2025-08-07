@@ -10,6 +10,6 @@ spring:
         git:
           uri: https://github.com/vietluannguyen711/microservices-configuration.git # <-- Thay b?ng URL kho Git c?a b?n
           search-paths:
-            - config-repo
+            - config
           default-label: main
           clone-on-start: true
