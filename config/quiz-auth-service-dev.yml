@@ -5,6 +5,4 @@ logging:
   level:
     com.netflix.discovery: DEBUG
     org.springframework.cloud.netflix.eureka: DEBUG
-server:
-  port: 9001
 
