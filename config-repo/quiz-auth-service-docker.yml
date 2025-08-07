@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: quiz-auth-service
+logging:
+  level:
+    com.netflix.discovery: DEBUG
+    org.springframework.cloud.netflix.eureka: DEBUG
+server:
+  port: 8081
+
