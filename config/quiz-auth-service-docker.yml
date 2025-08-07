@@ -7,4 +7,7 @@ logging:
     org.springframework.cloud.netflix.eureka: DEBUG
 server:
   port: 9001
-
+eureka:
+  client:
+    service-url:
+      default-zone: http://eureka-server:8761/eureka
