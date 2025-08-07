@@ -3,7 +3,7 @@ spring:
     name: quiz-user-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/quiz-user-db
+    url: jdbc:postgresql://postgres-user:5432/quiz-user-db
     username: postgres
     password: Naul126@/
   jpa:
